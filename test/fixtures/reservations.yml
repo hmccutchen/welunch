@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number_of_people: 1
+  status: MyString
+  time: 
+  user: one
+  restaurant: one
+
+two:
+  number_of_people: 1
+  status: MyString
+  time: 
+  user: two
+  restaurant: two
