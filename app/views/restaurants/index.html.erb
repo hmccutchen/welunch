@@ -1,17 +1,16 @@
 
 
+
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
-<h1>Restaurants</h1>
-<% @restaurants.each do |r| %>
-<%= link_to restaurants_path do%>
- <h3><u><%= r.name %></u></h3>
- <% end %>
-<hr>
-<p><%= r.address %></p>
+  <h1>Restaurants</h1>
+  <% @restaurants.each do |r| %>
+  <%= link_to restaurants_path do%>
+  <h3><u><%= r.name %></u></h3>
+  <p><%= r.address %></p>
   <p><%= r.category %></p>
-<% end %>
+  <%= link_to "reservations", new_restaurant_reservation_path(r), class: "btn btn-primary" %>
+  <% end %>
+  <% end %>
 </div>
-</div>
-</div>
+
+

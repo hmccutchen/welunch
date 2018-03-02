@@ -1,0 +1,7 @@
+
+
+<% @my_reservations.each do |reservation| %>
+<p><%= reservation.restaurant.name %></p>
+  <p><%= reservation.time %></p>
+  <p><%= reservation.number_of_people %></p>
+ <% end %>
