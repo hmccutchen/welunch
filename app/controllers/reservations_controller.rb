@@ -2,7 +2,8 @@
 
 
 class ReservationsController < ApplicationController
-  before_action :set_reservation, only: [:create, :new, :destroy]
+  before_action :set_restaurant, only: [:new, :create, :edit, :update, :destroy]
+  # before_action :set_reservation, only: [:new]
 
 
   def index
@@ -10,6 +11,8 @@ class ReservationsController < ApplicationController
   end
 
   def new
+    #i need to grab my restaurant_id in my url
+    # @restaurant = Restaurant.find(params[:restaurant_id])
     @reservation = Reservation.new
   end
 
@@ -17,36 +20,37 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @reservation.restaurant = @restaurant
     @reservation.user = current_user
-    if @reservation.save!
+    if @reservation.save
       flash[:notice] = "Succesfully made a reservation"
+      redirect_to restaurants_path
     else
       flash[:alert] = "Reservation unsuccessfull, please try again"
       render :new
-      end #maybe take this out (Maxi says no)
-  end
-
-  def show #ASK TEACHER: (i) do we need? (ii) syntax?
+    end
   end
 
   def edit
   end
 
   def update
+    @reservation.update(params[:restaurant_id])
   end
 
   def destroy
-    @reservation = Reservation.find(params[:id])
-    @reservation.destroy
-    #redirect? to where?
+    @reservation.destroy()
+
   end
 
-  private #Why is this private?
+  private
 
   def reservation_params
     params.require(:reservation).permit(:time, :number_of_people)
     #why only permit time? Is it not mandatory?
   end
 
+  def set_restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
+  end
   def set_reservation
     @reservation = Reservation.find(params[:reservation_id])
   end

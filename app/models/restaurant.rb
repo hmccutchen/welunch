@@ -1,4 +1,5 @@
 class Restaurant < ApplicationRecord
+
   has_many :reservations, dependent: :destroy
   has_many :menu_items, dependent: :destroy
 
@@ -9,6 +10,11 @@ class Restaurant < ApplicationRecord
 
 
 
+
+
+
+  has_many :reservations
+  has_many :menu_items
 
 
 end
