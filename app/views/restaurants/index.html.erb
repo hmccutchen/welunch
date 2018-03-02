@@ -39,15 +39,15 @@
 <div class="container">
   <h1>Restaurants</h1>
   <% @restaurants.each do |r| %>
-  <%= link_to restaurants_path do%>
+  <%= link_to restaurant_path(r) do%>
   <h3><u><%= r.name %></u></h3>
   <p><%= r.address %></p>
   <p><%= r.category %></p>
-  <%= link_to "reservations", new_restaurant_reservation_path(r), class: "btn btn-primary" %>
-  <% end %>
-  <% end %>
-</div>
 
+  <% end %>
+  <% end %>
+
+</div>
 
 
 
