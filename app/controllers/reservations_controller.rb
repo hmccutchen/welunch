@@ -20,7 +20,7 @@ class ReservationsController < ApplicationController
     if @reservation.save!
       flash[:notice] = "Succesfully made a reservation"
     else
-      flash[:alert] = "Try again, buddy"
+      flash[:alert] = "Reservation unsuccessfull, please try again"
       render :new
       end #maybe take this out (Maxi says no)
   end
