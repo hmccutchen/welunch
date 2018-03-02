@@ -1,17 +1,8 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1519137847-189aca33af2b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=21eff8fb6e8bee9d55679ddc727f9dac&auto=format&fit=crop&w=800&q=60');">
+  <div class="banner-content">
+    <h1>WeLunch</h1>
+    <p>Say goodbye to long waits for food to get to your table</p>
+  </div>
+ </div>
 
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
-<h1>Restaurants</h1>
-<% @restaurants.each do |r| %>
-<%= link_to restaurants_path do%>
- <h3><u><%= r.name %></u></h3>
- <% end %>
-<hr>
-<p><%= r.address %></p>
-  <p><%= r.category %></p>
-<% end %>
-</div>
-</div>
-</div>
