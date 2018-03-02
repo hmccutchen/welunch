@@ -3,7 +3,7 @@
 
 class ReservationsController < ApplicationController
   before_action :set_restaurant, only: [:new, :create, :edit, :update, :destroy]
-  # before_action :set_reservation, only: [:new]
+  before_action :set_reservation, only: [:edit, :update]
 
 
   def index
@@ -30,14 +30,18 @@ class ReservationsController < ApplicationController
   end
 
   def edit
+    @reservation.user = current_user
   end
 
   def update
-    @reservation.update(params[:restaurant_id])
+    @reservation.update(reservation_params)
+    redirect_to dashboard_index_path
+
   end
 
   def destroy
-    @reservation.destroy()
+    @reservation.user = current_user
+    @reservation.destroy
 
   end
 
@@ -52,6 +56,6 @@ class ReservationsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
   end
   def set_reservation
-    @reservation = Reservation.find(params[:reservation_id])
+    @reservation = Reservation.find(params[:id])
   end
 end

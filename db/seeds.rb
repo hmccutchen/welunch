@@ -15,7 +15,16 @@ categories = ["Pizza", "Indian", "Italian","French"]
     name:    Faker::Pokemon.name,
     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
     category: categories.sample
+
   )
   restaurant.save!
+  prices = [5.75, 6.00, 7.00]
+  10.times do
+    MenuItem.create(
+      restaurant: restaurant,
+      name: Faker::Food.dish ,
+      cateogry: Faker::Food.description ,
+      price: prices.sample)
+end
 end
 puts 'Finished!'
