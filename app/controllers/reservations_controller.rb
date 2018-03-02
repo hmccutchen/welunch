@@ -24,7 +24,7 @@ class ReservationsController < ApplicationController
       flash[:notice] = "Succesfully made a reservation"
       redirect_to restaurants_path
     else
-      flash[:alert] = "Try again, buddy"
+      flash[:alert] = "Reservation unsuccessfull, please try again"
       render :new
     end
   end
