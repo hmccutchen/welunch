@@ -1,0 +1,11 @@
+<h1>DashboardOwner#index</h1>
+
+
+
+<% @the_reservations.each do |reservation| %>
+<p><%= reservation.restaurant.name %></p>
+  <p><%= reservation.time %></p>
+  <p><%= reservation.number_of_people %></p>
+<%= link_to "Approve", approve_restaurant_reservation_path(reservation.restaurant, reservation), method: :patch, class: "btn btn-primary" %>
+<%= link_to "Decline", decline_restaurant_reservation_path(reservation.restaurant, reservation), method: :patch, class: "btn btn-danger" %>
+ <% end %>

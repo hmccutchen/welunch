@@ -5,6 +5,6 @@
   <p><%= reservation.number_of_people %></p>
 <%= link_to "edit", edit_restaurant_reservation_path(reservation.restaurant, reservation), class: "btn btn-primary" %>
 <%= link_to "cancel", restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-danger" %>
+<%= reservation.status %>
  <% end %>
-
 
