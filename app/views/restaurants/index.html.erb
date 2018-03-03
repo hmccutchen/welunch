@@ -1,4 +1,5 @@
-<!-- <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%)"> </div> -->
+
+
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="6000">
 
@@ -20,32 +21,165 @@
       <div class="flex-item">
         <h1>WeLunch</h1>
         <p>Say goodbye to long waits</p>
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-secondary" type="button">Go!</button>
-            </span>
-          </div>
-      <div>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="button">Go!</button>
+          </span>
+        </div>
+        <div>
+        </div>
+      </div>
+
     </div>
   </div>
-
 </div>
 
 
-
-<div class="container">
-  <h1>Restaurants</h1>
-  <% @restaurants.each do |r| %>
-  <%= link_to restaurant_path(r) do%>
-  <h3><u><%= r.name %></u></h3>
-  <p><%= r.address %></p>
-  <p><%= r.category %></p>
-
-  <% end %>
-  <% end %>
-
+<div class="content">
+  <div class="cards-container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(<%= image_path 'rio.jpg' %>)">
+          Rio
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/berlin.jpg)">
+          Berlin
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/shanghai.jpg)">
+          Shanghai
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/barcelona.jpg)">
+          Barcelona
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/rio.jpg)">
+          Rio
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/berlin.jpg)">
+          Berlin
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/shanghai.jpg)">
+          Shanghai
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/barcelona.jpg)">
+          Barcelona
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/rio.jpg)">
+          Rio
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/berlin.jpg)">
+          Berlin
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/shanghai.jpg)">
+          Shanghai
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/barcelona.jpg)">
+          Barcelona
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/rio.jpg)">
+          Rio
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/berlin.jpg)">
+          Berlin
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/shanghai.jpg)">
+          Shanghai
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/barcelona.jpg)">
+          Barcelona
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/rio.jpg)">
+          Rio
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/berlin.jpg)">
+          Berlin
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/shanghai.jpg)">
+          Shanghai
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/barcelona.jpg)">
+          Barcelona
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(images/rio.jpg)">
+          Rio
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+  id="map"
+  style="width: 100%;
+  height: 100vh;"
+  data-markers="<%= @markers.to_json %>"
+  ></div>
 </div>
+
+<!-- Gmaps js: building the map -->
+<script>
+  function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 52.5206, lng: 13.4098},
+          scrollwheel: false,
+          zoom: 8
+        });
+      }
+    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Gmaps JavaScript -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzER7O10ZOUp7FloJzMe2r8X1GIQhgt7Q&callback=initMap">
+  </script>
+
+
+
+
+
+
+
 
 
 
