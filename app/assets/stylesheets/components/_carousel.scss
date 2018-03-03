@@ -28,3 +28,12 @@
 .flex-item{
   width:400px;
 }
+
+.carousel-inner {
+    max-height: 457px;
+    overflow: hidden;
+  }
+
+  .flex-item p {
+    text-shadow: 1px 1px rgb(20,20,20);
+  }
