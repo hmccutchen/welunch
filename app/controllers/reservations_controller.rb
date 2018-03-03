@@ -2,8 +2,8 @@
 
 
 class ReservationsController < ApplicationController
-  before_action :set_restaurant, only: [:new, :create, :edit, :update]
-  before_action :set_reservation, only: [:edit, :update, :destroy]
+  before_action :set_restaurant, only: [:new, :create, :edit, :update, :approve, :decline]
+  before_action :set_reservation, only: [:edit, :update, :destroy, :approve, :decline]
 
 
   def index
@@ -44,6 +44,18 @@ class ReservationsController < ApplicationController
     @reservation.destroy
     redirect_to dashboard_index_path
 
+  end
+
+  def approve
+    @reservation.status = "approved"
+    @reservation.save
+    redirect_to dashboard_owner_index_path
+  end
+
+  def decline
+    @reservation.status = "Declined"
+    @reservation.save
+    redirect_to dashboard_owner_index_path
   end
 
   private
