@@ -1,0 +1,39 @@
+.item img{
+  width: 100%;
+  height:50%
+}
+.content-carousel{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width:100%;
+  text-align: left;
+  color: #fff;
+  font-weight: lighter;
+}
+
+.content-carousel .align-center{
+  display: flex;
+  align-items:center;
+  height:100%;
+  justify-content: center;
+}
+
+.content-carousel .align-center h1{
+  margin:0;
+  font-weight: 700;
+  font-size: 46px;
+}
+.flex-item{
+  width:400px;
+}
+
+.carousel-inner {
+    max-height: 457px;
+    overflow: hidden;
+  }
+
+  .flex-item p {
+    text-shadow: 1px 1px rgb(20,20,20);
+  }

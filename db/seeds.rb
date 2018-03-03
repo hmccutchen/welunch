@@ -12,6 +12,7 @@ Restaurant.destroy_all
 
 
 
+
 #upload picture for each restaurnt
 
 restaurants = [
@@ -128,6 +129,9 @@ restaurants.each  do |restaurant_data|
     menu_item.restaurant = new_resto
     menu_item.save!
   end
+
+end
+
 end
 puts 'Finished!'
 

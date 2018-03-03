@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'dashboard/index'
 
   devise_for :users
-  root to: 'pages#home'
+  root to: 'restaurants#index'
   resources :dashboard, only: :index
   resources :restaurants do
     resources :reservations
