@@ -2,8 +2,8 @@
 
 
 class ReservationsController < ApplicationController
-  before_action :set_restaurant, only: [:new, :create, :edit, :update, :destroy]
-  before_action :set_reservation, only: [:edit, :update]
+  before_action :set_restaurant, only: [:new, :create, :edit, :update]
+  before_action :set_reservation, only: [:edit, :update, :destroy]
 
 
   def index
@@ -40,8 +40,9 @@ class ReservationsController < ApplicationController
   end
 
   def destroy
-    @reservation.user = current_user
+
     @reservation.destroy
+    redirect_to dashboard_index_path
 
   end
 
