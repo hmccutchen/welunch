@@ -1,47 +1,59 @@
-<!>
+<style>
+#restaurant-banner {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+.restaurant-banner-content {
+  color: white;
+}
+</style>
+
+<div id="restaurant-banner" style="background-image: url(<%= image_path @restaurant.picture %>)">
+  <div class="restaurant-banner-content">
+    <h2><%= @restaurant.name %></h2>
+    <p> Category: <%= @restaurant.category %></p>
+    <p>Address: <%= @restaurant.address %></p>
+  </div>
+</div>
 
 <div class="container">
-  <div class="restaurant-details">
-    <div>
-      </div>
-      <h2><%= @restaurant.name %></h2>
-      <p> Category: <%= @restaurant.category %></p>
-      <p>Address: <%= @restaurant.address %></p>
-      <p><%= image_tag "http://exploreharlemnyc.com/wp-content/uploads/2016/04/hero-grange.jpg"%></p>
-      <% @restaurant.reservations.each do |d| %>
-      <p><%= d.date.to_formatted_s(:long) %></p>
-      <% end %>
-    </div>
+    <div class="col-xs-12 col-sm-6" id="make-reservation">
 
      <%= link_to "Make a reservation", new_restaurant_reservation_path(@restaurant), class: "btn btn-primary" %>
+     <% @restaurant.reservations.each do |d| %>
+     <p><%= d.date.to_formatted_s(:long) %></p>
+     <% end %>
+   </div>
 
 
-<div class="container">
+ <div class="col-xs-12 col-sm-6">
   <div class="menu">
-      </div>
-      <h2>Drinks</h2>
-      <p><% @restaurant.menu_items.where(menu_category: 'drinks').each do |item| %></p>
-      <%=item.name%>
-      <%=item.description%>
-      <p> $<%=item.price%></p>
-      <%end%>
-      </div>
-      <h2>Appetizer</h2>
-      <p><% @restaurant.menu_items.where(menu_category: 'appetizer').each do |item| %></p>
-      <%=item.name%>
-      <%=item.description%>
-      <p> $<%=item.price%></p>
-      <%end%>
-      <h2>Entrees</h2>
-      <p><% @restaurant.menu_items.where(menu_category: 'entrees').each do |item| %></p>
-      <%=item.name%>
-      <%=item.description%>
-      <p> $<%=item.price%></p>
-      <%end%>
-      </div>
+    <h2>Drinks</h2>
+    <p><% @restaurant.menu_items.where(menu_category: 'drinks').each do |item| %></p>
+    <%=item.name%>
+    <%=item.description%>
+    <p> $<%=item.price%></p>
+    <%end%>
+    <h2>Appetizer</h2>
+    <p><% @restaurant.menu_items.where(menu_category: 'appetizer').each do |item| %></p>
+    <%=item.name%>
+    <%=item.description%>
+    <p> $<%=item.price%></p>
+    <%end%>
+    <h2>Entrees</h2>
+    <p><% @restaurant.menu_items.where(menu_category: 'entrees').each do |item| %></p>
+    <%=item.name%>
+    <%=item.description%>
+    <p> $<%=item.price%></p>
+    <%end%>
     </div>
+  </div>
 </div>
+
 
 
 

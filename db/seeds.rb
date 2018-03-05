@@ -15,6 +15,7 @@ restaurants = [
     name: "Prince Street Pizza",
     category: "Italian",
     address: "27 Prince St A, New York, NY 10012, USA",
+    picture: "Prince.jpg",
     items: [
       {
         name: "Grilled Fish",
@@ -102,10 +103,11 @@ restaurants = [
     name: "The Mark",
     category: "International",
     address: "25 E 77th St, New York, NY 10075, USA",
+    picture: "TheMark.jpg",
     items: [
       {
-        name: "Table Water",
-        description: "(sparkling or still)",
+        name: "Mineral Water",
+        description: "(Bottle of Sparkling or Still Mineral Water)",
         menu_category: "drinks",
         price: 9.00
       },
@@ -127,13 +129,6 @@ restaurants = [
         menu_category: "drinks",
         price: 15.00
       },
-       {
-        name: "Banana-Berry Smoothie",
-        description: "(Greek Yogurt, Maple Syrup)",
-        menu_category: "drinks",
-        price: 15.00
-      },
-
         {
         name: "The MARK Cocktail",
         description: "(Bisol 'Jeio' Prosecco, Lychee-Raspberry)",
@@ -156,45 +151,129 @@ restaurants = [
       },
 
         {
-        name: "XXXXXX",
-        description: "(XXXXX)",
+        name: "Becks",
+        description: "(German Pilsner)",
         menu_category: "drinks",
         price: 10.00
       },
 
         {
-        name: "XXXXXX",
-        description: "(XXXXX)",
+        name: "Buckler",
+        description: "(Non-Alcoholic, Netherlands)",
         menu_category: "drinks",
-        price: 10.00
+        price: 6.00
       },
 
         {
-        name: "XXXXXX",
-        description: "(XXXXX)",
+        name: "Grüner Veltliner",
+        description: "(White Wine, Glass, Volker, 2016, Weinviertel, Austria)",
         menu_category: "drinks",
-        price: 10.00
+        price: 15.00
       },
 
         {
-        name: "XXXXXX",
-        description: "(XXXXX)",
+        name: "Riesling",
+        description: "(White Wine, Glass, Koehler-Ruprecht Kabinett 'Steinacker' 2014, Pfalz, Germany)",
         menu_category: "drinks",
-        price: 10.00
+        price: 18.00
       },
 
         {
-        name: "XXXXXX",
-        description: "(XXXXX)",
+        name: "Côtes du Rhône",
+        description: "(Red Wine, Glass, Clos Chanteduc 2012, Rhone Valley, France)",
         menu_category: "drinks",
-        price: 10.00
+        price: 15.00
       },
 
         {
-        name: "XXXXXX",
-        description: "(XXXXX)",
+        name: "Barolo",
+        description: "(Red Wine, Glass, Oddero 2013, Piedmont, Italy )",
         menu_category: "drinks",
-        price: 10.00
+        price: 31.00
+      },
+        {
+        name: "Veuve Clicquot",
+        description: "(Champagne, 'La Grande Dame' Brut Rosé 2006)",
+        menu_category: "drinks",
+        price: 1120.00
+      },
+        {
+        name: "'La Tâche'",
+        description: "(Bottle 0,75 l, Domaine de la Romanée-Conti 'La Tâche' Grand Cru 2014, Vosne-Romanee)",
+        menu_category: "drinks",
+        price: 3900.00
+      },
+        {
+        name: "Egg Caviar",
+        description: "(Egg Caviar, served with toast and sauce speciale)",
+        menu_category: "appetizer",
+        price: 46.00
+      },
+        {
+        name: "Avocado Toast",
+        description: "(Seven Grain, Gluten Free, served with Salmon, poached eggs)",
+        menu_category: "appetizer",
+        price: 18.00
+      },
+        {
+        name: "Artichoke",
+        description: "(Chilled Artichoke, Mustard Dipping Sauce, served with Seven Grain Bred)",
+        menu_category: "appetizer",
+        price: 21.00
+      },
+        {
+        name: "Pasta Fettuccine",
+        description: "(Fresh Fettuccine Meyer Lemon, Parmesan, Black Pepper )",
+        menu_category: "entrees",
+        price: 28.00
+      },
+        {
+        name: "Pasta Fussili Mozzarella",
+        description: "(Mozzarella, Tomato, Basil)",
+        menu_category: "entrees",
+        price: 31.00
+      },
+        {
+        name: "Chicken Salad",
+        description: "(Chicken-Coconut Milk Soup, Galangal, Shiitakes )",
+        menu_category: "appetizer",
+        price: 19.00
+      },
+        {
+        name: "Salad Nicoise",
+        description: "(Nicoise Salad, Sicilian Tuna, Lemon Confit Vinaigrette )",
+        menu_category: "appetizer",
+        price: 21.00
+      },
+        {
+        name: "Pizza Margarita",
+        description: "(Mozzarella, Tomato, Basil)",
+        menu_category: "entrees",
+        price: 22.00
+      },
+        {
+        name: "Pizza Pepperoni",
+        description: "(Pepperoni, Tomato, Mozzarella)",
+        menu_category: "entrees",
+        price: 25.00
+      },
+        {
+        name: "Croque Monsieur",
+        description: "(Flying Pigs Farm Ham Comte, Gruyere Cheese)",
+        menu_category: "entrees",
+        price: 29.00
+      },
+        {
+        name: "Sea Bass",
+        description: "(Grilled Black Sea Bass, Braised Fennel, Carrots, Cerignola Olives)",
+        menu_category: "entrees",
+        price: 46.00
+      },
+        {
+        name: "Beef Tenderloin",
+        description: "(Beef Tenderloin, Smooth Parsnips, Roasted Brussels Sprouts, Miso Mustard )",
+        menu_category: "entrees",
+        price: 52.00
       },
         {
         name: "XXXXXX",
@@ -202,116 +281,13 @@ restaurants = [
         menu_category: "drinks",
         price: 10.00
       },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
-      },
-
     ]
   }
 ]
 
 # loop through the restaurants array (array of hashes!)
 restaurants.each  do |restaurant_data|
-  new_resto = Restaurant.new(name: restaurant_data[:name], category: restaurant_data[:category], address: restaurant_data[:address])
+  new_resto = Restaurant.new(name: restaurant_data[:name], category: restaurant_data[:category], address: restaurant_data[:address], picture: restaurant_data[:picture])
   new_resto.save!
 
   restaurant_data[:items].each do |item|
