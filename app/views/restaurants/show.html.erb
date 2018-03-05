@@ -12,7 +12,7 @@
 }
 </style>
 
-<div id="restaurant-banner" style="background-image: url(<%= image_path @restaurant.picture %>)">
+<div id="restaurant-banner" style="background-image: url(<%= image_path @restaurant.picture %>); background-size: cover;">
   <div class="restaurant-banner-content">
     <h2><%= @restaurant.name %></h2>
     <p> Category: <%= @restaurant.category %></p>
