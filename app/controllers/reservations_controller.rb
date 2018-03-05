@@ -40,7 +40,7 @@ class ReservationsController < ApplicationController
   end
 
   def show
-
+    @order_item = OrderItem.new
   end
 
   def destroy
