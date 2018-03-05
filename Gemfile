@@ -11,6 +11,7 @@ gem 'rails', '5.1.5'
 gem 'redis'
 gem "geocoder"
 gem 'cloudinary'
+gem 'pg_search'
 
 
 gem 'autoprefixer-rails'
