@@ -25,7 +25,7 @@
 
      <%= link_to "Make a reservation", new_restaurant_reservation_path(@restaurant), class: "btn btn-primary" %>
      <% @restaurant.reservations.each do |d| %>
-     <p><%= d.date.to_formatted_s(:long) %></p>
+     <p><%= d.time.to_formatted_s(:long) %></p>
      <% end %>
    </div>
 
