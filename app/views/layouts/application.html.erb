@@ -4,6 +4,9 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>TODO</title>
@@ -18,10 +21,19 @@
     <%= yield %>
      <%= render 'shared/footer' %>
     <%= javascript_include_tag "application" %>
+
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js" %>
+    <%= javascript_pack_tag "map" %>
+
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
-    <%= javascript_pack_tag "application" %>
+
+    <%= javascript_pack_tag "map" %>
+  <%= javascript_pack_tag "application" %>
+
+
 
   <%= yield(:after_js) %>
+
 </html>
 
 

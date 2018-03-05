@@ -2,8 +2,8 @@
 
 
 class ReservationsController < ApplicationController
-  before_action :set_restaurant, only: [:new, :create, :edit, :update, :approve, :decline]
-  before_action :set_reservation, only: [:edit, :update, :destroy, :approve, :decline]
+  before_action :set_restaurant, only: [:new,:update, :show, :create, :edit, :approve, :decline]
+  before_action :set_reservation, only: [:edit, :update, :show, :destroy, :approve, :decline]
 
 
   def index
@@ -22,7 +22,7 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user
     if @reservation.save
       flash[:notice] = "Succesfully made a reservation"
-      redirect_to restaurants_path
+      redirect_to restaurant_reservation_path(@restaurant, @reservation)
     else
       flash[:alert] = "Reservation unsuccessfull, please try again"
       render :new
@@ -36,6 +36,10 @@ class ReservationsController < ApplicationController
   def update
     @reservation.update(reservation_params)
     redirect_to dashboard_index_path
+
+  end
+
+  def show
 
   end
 

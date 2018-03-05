@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>menu</h1>
+
+  <h1><%= @restaurant.name %></h1>
+
+  <h2>MENU ITEMS:</h2>
+  <% @restaurant.menu_items.each do |menu_item| %>
+  <h3><%= menu_item.name %></h3>
+  <p><%= menu_item.description %></p>
+  <p> <%=menu_item.price %></p>
+  <p><%=link_to "Add", class: "btn btn-primary" %></p>
+  <hr>
+  <% end %>
+</div>
+
