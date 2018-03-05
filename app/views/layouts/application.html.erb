@@ -23,9 +23,15 @@
     <%= javascript_pack_tag "map" %>
 
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
+<<<<<<< HEAD
     <%= javascript_pack_tag "map" %>
   <%= javascript_pack_tag "application" %>
 
+=======
+    <%= javascript_pack_tag "application" %>
+
+  <%= yield(:after_js) %>
+>>>>>>> 62ca1ac0341293a3a1d337de49d5017bd004fe71
 </html>
 
 

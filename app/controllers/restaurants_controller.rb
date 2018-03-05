@@ -14,7 +14,6 @@ class RestaurantsController < ApplicationController
       {
         lat: restaurant.latitude,
         lng: restaurant.longitude
-
       }
     end
   end

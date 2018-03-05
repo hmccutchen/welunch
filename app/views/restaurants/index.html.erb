@@ -38,12 +38,17 @@
 </div>
 
 
+
+
+
 <div class="content">
   <div class="cards-container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card" style="background-image: url(<%= image_path 'rio.jpg' %>)">
-          Rio
+
+
+        <div class="card" style="background-image: url(<%= image_path 'restaurant1.jpg' %>)">
+          Pizza Street
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
@@ -92,7 +97,7 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card" style="background-image: url(images/shanghai.jpg)">
+        <div class="card" style="background-image: url(images/restaurant1.jpg)">
           Shanghai
         </div>
       </div>
@@ -166,5 +171,8 @@
 
 
 
-
-
+<%= content_for(:after_js) do  %>
+  <script>
+    $('.carousel').carousel()
+  </script>
+<% end %>
