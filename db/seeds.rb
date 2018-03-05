@@ -95,7 +95,216 @@ restaurants = [
         description: "(combination of shrimp, scallops and calamari which lay on top of mixed greens and crunchy vegetables)",
         menu_category: "appetizer",
         price: 11.50
+      }
+    ]
+  },
+  {
+    name: "The Mark",
+    category: "International",
+    address: "25 E 77th St, New York, NY 10075, USA",
+    items: [
+      {
+        name: "Table Water",
+        description: "(sparkling or still)",
+        menu_category: "drinks",
+        price: 9.00
       },
+       {
+        name: "Soda",
+        description: "(Coca Cola, Coca Cola light, Coca Cola zero, Fanta, Sprite, Dr Pepper, Mountain Dew, Snapple)",
+        menu_category: "drinks",
+        price: 9.00
+      },
+       {
+        name: "Green Juice",
+        description: "(Spinach, Cucumber, Kale, Apple, Lemon, Ginge)",
+        menu_category: "drinks",
+        price: 15.00
+      },
+       {
+        name: "Ruby Red Juice",
+        description: "(Carrot, Beet, Lemon, Orange)",
+        menu_category: "drinks",
+        price: 15.00
+      },
+       {
+        name: "Banana-Berry Smoothie",
+        description: "(Greek Yogurt, Maple Syrup)",
+        menu_category: "drinks",
+        price: 15.00
+      },
+
+        {
+        name: "The MARK Cocktail",
+        description: "(Bisol 'Jeio' Prosecco, Lychee-Raspberry)",
+        menu_category: "drinks",
+        price: 20.00
+      },
+
+        {
+        name: "Blood Orange Mimosa",
+        description: "(Domaine François Baur Crémant d’Alsace, Blood Orange)",
+        menu_category: "drinks",
+        price: 20.00
+      },
+
+        {
+        name: "Mandarin Mule",
+        description: "(Stoli Elit Vodka, Mandarin Nectar, Elderflower, Lemon)",
+        menu_category: "drinks",
+        price: 28.00
+      },
+
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+        {
+        name: "XXXXXX",
+        description: "(XXXXX)",
+        menu_category: "drinks",
+        price: 10.00
+      },
+
     ]
   }
 ]
