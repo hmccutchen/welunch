@@ -11,12 +11,11 @@ gem 'rails', '5.1.5'
 gem 'redis'
 gem "geocoder"
 gem 'cloudinary'
-<<<<<<< HEAD
+
 gem 'pg_search'
 
-=======
 gem 'jquery-rails'
->>>>>>> 62ca1ac0341293a3a1d337de49d5017bd004fe71
+
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
