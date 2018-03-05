@@ -1,4 +1,4 @@
-<!>
+
 
 
 <div class="container">
@@ -10,7 +10,7 @@
       <p>Address: <%= @restaurant.address %></p>
       <p><%= image_tag "http://exploreharlemnyc.com/wp-content/uploads/2016/04/hero-grange.jpg"%></p>
       <% @restaurant.reservations.each do |d| %>
-      <p><%= d.date.to_formatted_s(:long) %></p>
+      <p><%= d.time.to_formatted_s(:long)%></p>
       <% end %>
     </div>
 
