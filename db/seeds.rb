@@ -275,14 +275,129 @@ restaurants = [
         menu_category: "entrees",
         price: 52.00
       },
-        {
-        name: "XXXXXX",
-        description: "(XXXXX)",
-        menu_category: "drinks",
-        price: 10.00
+    ]
+  },
+
+  {
+    name: "THE GRILL",
+    category: "American",
+    address: "99 E 52nd St, New York, NY 10022, USA",
+    picture: "TheGrill.jpg",
+    items: [
+      {
+        name: "XXXX",
+        description: "(XXXX)",
+        menu_category: "entrees",
+        price: 13.00
       },
     ]
-  }
+  },
+   {
+    name: "Sushi Nakazawa",
+    category: "Sushi",
+    address: "23 Commerce St, New York, NY 10014, USA",
+    picture: "Sushi1.jpg",
+    items: [
+      {
+        name: "XXXX",
+        description: "(XXXX)",
+        menu_category: "entrees",
+        price: 13.00
+      },
+    ]
+  },
+     {
+    name: "Monkey Bar",
+    category: "American",
+    address: "60 E 54th St, New York, NY 10022, USA",
+    picture: "MonkeyBar.jpg",
+    items: [
+      {
+        name: "XXXX",
+        description: "(XXXX)",
+        menu_category: "entrees",
+        price: 13.00
+      },
+    ]
+  },
+
+    {
+    name: "UPLAND",
+    category: "American",
+    address: "345 Park Ave S, New York, NY 10010, USA",
+    picture: "UPLAND.jpg",
+    items: [
+      {
+        name: "XXXX",
+        description: "(XXXX)",
+        menu_category: "entrees",
+        price: 13.00
+      },
+    ]
+  },
+  {
+    name: "Cherche Midi",
+    category: "French",
+    address: "8 Extra Pl, New York, NY 10003, USA",
+    picture: "Cherche.jpg",
+    items: [
+      {
+        name: "XXXX",
+        description: "(XXXX)",
+        menu_category: "entrees",
+        price: 13.00
+      },
+    ]
+  },
+
+      {
+    name: "Le Bernardin",
+    category: "French",
+    address: "155 W 51st St, New York, NY 10019, USA",
+    picture: "LeBernadin.jpg",
+    items: [
+      {
+        name: "XXXX",
+        description: "(XXXX)",
+        menu_category: "entrees",
+        price: 13.00
+      },
+    ]
+  },
+
+  {
+    name: "Buddakan",
+    category: "Japanese",
+    address: "75 9th Ave, New York, NY 10011, USA",
+    picture: "Budda.jpg",
+    items: [
+      {
+        name: "XXXX",
+        description: "(XXXX)",
+        menu_category: "entrees",
+        price: 13.00
+      },
+    ]
+  },
+        {
+    name: "Daniel",
+    category: "French",
+    address: "60 E 65th St, New York, NY 10065, USA",
+    picture: "Daniel.jpg",
+    items: [
+      {
+        name: "XXXX",
+        description: "(XXXX)",
+        menu_category: "entrees",
+        price: 13.00
+      },
+    ]
+  },
+
+
+
+
+
 ]
 
 # loop through the restaurants array (array of hashes!)
