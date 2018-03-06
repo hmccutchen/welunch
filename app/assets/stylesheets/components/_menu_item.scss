@@ -1,0 +1,99 @@
+.menu {
+  display: flex;
+  padding: 20px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+
+/* Body design */
+.menu-body {
+  flex: 1 1 auto;
+}
+.menu-body h3 {
+  font-weight: bold;
+  font-size: 23px;
+  margin-top: 0;
+}
+.menu-body p {
+  font-weight: lighter;
+  color: #999999;
+  margin-bottom: 0;
+}
+
+/* menu image */
+.menu-image {
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 175px;
+}
+
+/* Upvote design */
+.menu-upvote {
+  padding-right: 20px;
+  text-align: center;
+  transition: all 0.15s ease;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  .fa{
+    font-size: 20px;
+  }
+}
+.menu-count {
+  margin: 2px 0 0;
+}
+.menu-arrow {
+  transition: all 0.15s ease;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-bottom: 9px solid black;
+  border-radius: 2px;
+  margin: auto;
+}
+
+/* Controls design */
+.menu-controls {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}
+.menu-controls a {
+  padding: 0 20px;
+  font-size: 17px;
+  color: #E6E6E6;
+}
+.menu-controls a:hover {
+  color: #D3473C !important
+}
+.menu-controls-hidden a {
+  color: transparent;
+  font-size: 15px;
+  transition: all 0.15s ease;
+  border-color: transparent;
+}
+
+/* Hover effects */
+// .menu:hover {
+//   background: #f7f7fa;
+//   cursor: pointer;
+// }
+// .menu-upvote:hover, .menu-upvote.menu-upvote-upvoted {
+//   color: #5898f1;
+//   cursor: pointer;
+// }
+.menu-upvote-upvoted .menu-arrow {
+  border-bottom-color: #5898f1;
+}
+// .menu:hover .menu-upvote {
+//   transform: scale(1.2)
+// }
+.menu:hover .menu-controls-hidden a {
+  color: #E6E6E6;
+}
+.menu-upvote:hover .menu-arrow {
+  border-bottom: 9px solid #5898f1;
+}
