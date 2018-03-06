@@ -1,6 +1,8 @@
 
 <% @my_reservations.each do |reservation| %>
+<%= link_to reservation_order_items_path(reservation) do %>
 <h2><%= reservation.restaurant.name %></h2>
+  <% end %>
   <p><%= reservation.time.to_formatted_s(:long) %></p>
   <p><%= reservation.number_of_people %></p>
 <%= link_to "edit", edit_restaurant_reservation_path(reservation.restaurant, reservation), class: "btn btn-primary" %>

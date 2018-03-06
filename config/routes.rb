@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     end
   end
     resources :reservations, only: [] do
-      resources :order_items, only: [:create]
+      resources :order_items, only: [:create, :index]
     end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
