@@ -14,9 +14,12 @@
 
 <div id="restaurant-banner" style="background-image: url(<%= image_path @restaurant.picture %>); background-size: cover;">
   <div class="restaurant-banner-content">
-    <!--     <h2><#%= @restaurant.name %></h2> -->
-    <p> Category: <%= @restaurant.category %></p>
-    <p>Address: <%= @restaurant.address %></p>
+
+    <h2><%#= @restaurant.name %></h2>
+    <p>  <%#= @restaurant.category %></p>
+    <p> <%#= @restaurant.address %></p>
+
+   
   </div>
 </div>
 
@@ -33,10 +36,20 @@
 
 
 
+     <%# @restaurant.reservations.each do |d| %>
+     <p><%#= d.time.to_formatted_s(:long) %></p>
+     <%# end %>
+   </div>
+<div style= "overflow-y: scroll; height:600px; background: #cacaca; border-radius: 2%">
+
 
 
  <div class="col-xs-12 col-sm-6">
   <div class="menu">
+    <h2><%= @restaurant.name %></h2>
+    <p><i> <%= @restaurant.category %></i></p>
+        <h4>Address:</h4>
+    <p><%= @restaurant.address %></p>
     <h2>Drinks</h2>
     <p><% @restaurant.menu_items.where(menu_category: 'drinks').each do |item| %></p>
     <%=item.name%>
@@ -59,6 +72,7 @@
 </div>
 </div>
 
-
+</div>
+     <%= link_to "Make a reservation", new_restaurant_reservation_path(@restaurant), class: "btn btn-primary" %>
 
 
