@@ -12,10 +12,10 @@ Restaurant.destroy_all
 
 restaurants = [
   {
-    name: "Prince Street Pizza",
-    category: "Italian",
-    address: "27 Prince St A, New York, NY 10012, USA",
-    picture: "Prince.jpg",
+    name: "The Standard Grill",
+    category: "American",
+    address: "848 Washington St, New York, NY 10014, USA",
+    picture: "Standard.jpg",
     items: [
       {
         name: "Grilled Fish",
@@ -103,7 +103,7 @@ restaurants = [
     name: "The Mark",
     category: "International",
     address: "25 E 77th St, New York, NY 10075, USA",
-    picture: "TheMark.jpg",
+    picture: "TheMark2.JPG",
     items: [
       {
         name: "Mineral Water",
@@ -279,7 +279,7 @@ restaurants = [
   },
 
   {
-    name: "THE GRILL",
+    name: "The Grill",
     category: "American",
     address: "99 E 52nd St, New York, NY 10022, USA",
     picture: "TheGrill.jpg",
@@ -322,7 +322,7 @@ restaurants = [
   },
 
     {
-    name: "UPLAND",
+    name: "Upland",
     category: "American",
     address: "345 Park Ave S, New York, NY 10010, USA",
     picture: "UPLAND.jpg",
@@ -384,6 +384,36 @@ restaurants = [
     category: "French",
     address: "60 E 65th St, New York, NY 10065, USA",
     picture: "Daniel.jpg",
+    items: [
+      {
+        name: "XXXX",
+        description: "(XXXX)",
+        menu_category: "entrees",
+        price: 13.00
+      },
+    ]
+  },
+
+    {
+    name: "Flora Bar",
+    category: "French",
+    address: "945 Madison Ave, New York, NY 10021, USA",
+    picture: "Flora.jpg",
+    items: [
+      {
+        name: "XXXX",
+        description: "(XXXX)",
+        menu_category: "entrees",
+        price: 13.00
+      },
+    ]
+  },
+
+    {
+    name: "Eleven Madison Park",
+    category: "French",
+    address: "11 Madison Ave, New York, NY 10010, USA",
+    picture: "Eleven.jpg",
     items: [
       {
         name: "XXXX",
