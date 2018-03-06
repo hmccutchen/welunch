@@ -14,20 +14,25 @@
 
 <div id="restaurant-banner" style="background-image: url(<%= image_path @restaurant.picture %>); background-size: cover;">
   <div class="restaurant-banner-content">
-    <h2><%= @restaurant.name %></h2>
+    <!--     <h2><#%= @restaurant.name %></h2> -->
     <p> Category: <%= @restaurant.category %></p>
     <p>Address: <%= @restaurant.address %></p>
   </div>
 </div>
 
 <div class="container">
-    <div class="col-xs-12 col-sm-6" id="make-reservation">
+  <div class="col-xs-12 col-sm-6" id="make-reservation">
 
-     <%= link_to "Make a reservation", new_restaurant_reservation_path(@restaurant), class: "btn btn-primary" %>
-     <% @restaurant.reservations.each do |d| %>
-     <p><%= d.time.to_formatted_s(:long) %></p>
-     <% end %>
-   </div>
+
+   <%= link_to "Make a reservation", restaurant_path(@restaurant), class: "btn btn-primary" %>
+   <% @restaurant.reservations.each do |d| %>
+   <p><%= d.time.to_formatted_s(:long) %></p>
+   <% end %>
+    <%= render "reservations/form" %>
+ </div>
+
+
+
 
 
  <div class="col-xs-12 col-sm-6">
@@ -50,8 +55,8 @@
     <%=item.description%>
     <p> $<%=item.price%></p>
     <%end%>
-    </div>
   </div>
+</div>
 </div>
 
 
