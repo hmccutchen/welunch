@@ -23,6 +23,7 @@
 <div class="container">
   <div class="col-xs-12 col-sm-6" id="make-reservation">
 
+
    <%= link_to "Make a reservation", restaurant_path(@restaurant), class: "btn btn-primary" %>
    <% @restaurant.reservations.each do |d| %>
    <p><%= d.time.to_formatted_s(:long) %></p>
@@ -30,7 +31,8 @@
     <%= render "reservations/form" %>
  </div>
 
- <!-- new_restaurant_reservation -->
+
+
 
 
  <div class="col-xs-12 col-sm-6">
