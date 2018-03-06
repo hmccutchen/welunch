@@ -1,4 +1,66 @@
-<style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 tall">
+
+      <div class="sticky">
+
+
+        <div class="restaurant-info">
+          <h2><%= @restaurant.name %></h2>
+          <p><%= @restaurant.address %></p>
+        </div>
+
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path @restaurant.picture %>);">
+          <div class="card-category"><%= @restaurant.category %></div>
+        </div>
+
+        <div class="reservation-form">
+          <%= render "reservations/form" %>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-8">
+      <div class="menu-container">
+
+        <% @restaurant.menu_items.each do |item| %>
+
+          <div class="menu">
+            <div class='menu-upvote'>
+              <i class="fa fa-cutlery" aria-hidden="true"></i>
+              <div class='menu-count'></div>
+            </div>
+
+            <div class='menu-body'>
+              <h3><%= item.name %></h3>
+              <p><%= item.description %></p>
+            </div>
+
+            <div>$<%= item.price %></div>
+
+            <!-- <ul class="list-inline menu-controls hidden-sm hidden-xs">
+              <li><a href=""><i class="fa fa-heart"></i></a></li>
+              <li><a href=""><i class="fa fa-share"></i></a></li>
+              <li><a href=""><i class="fa fa-star"></i></a></li>
+            </ul> -->
+          </div>
+
+        <% end %>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <style>
 #restaurant-banner {
   height: 60vh;
   width: 100%;
@@ -15,11 +77,12 @@
 <div id="restaurant-banner" style="background-image: url(<%= image_path @restaurant.picture %>); background-size: cover;">
   <div class="restaurant-banner-content">
 
-    <h2><%#= @restaurant.name %></h2>
+
+    <h2><%= @restaurant.name %></h2>
     <p>  <%#= @restaurant.category %></p>
     <p> <%#= @restaurant.address %></p>
 
-   
+
   </div>
 </div>
 
@@ -40,7 +103,7 @@
      <p><%#= d.time.to_formatted_s(:long) %></p>
      <%# end %>
    </div>
-<div style= "overflow-y: scroll; height:600px; background: #cacaca; border-radius: 2%">
+<div style= "overflow-y: scroll; height:500px; background: #cacaca; border-radius: 2%">
 
 
 
@@ -73,6 +136,7 @@
 </div>
 
 </div>
-     <%= link_to "Make a reservation", new_restaurant_reservation_path(@restaurant), class: "btn btn-primary" %>
+ -->
+     <!-- <#%= link_to "Make a reservation", new_restaurant_reservation_path(@restaurant), class: "btn btn-primary" %> -->
 
 

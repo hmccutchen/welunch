@@ -279,7 +279,7 @@ restaurants = [
   },
 
   {
-    name: "THE GRILL",
+    name: "The Grill",
     category: "American",
     address: "99 E 52nd St, New York, NY 10022, USA",
     picture: "TheGrill.jpg",
@@ -322,7 +322,7 @@ restaurants = [
   },
 
     {
-    name: "UPLAND",
+    name: "Upland",
     category: "American",
     address: "345 Park Ave S, New York, NY 10010, USA",
     picture: "UPLAND.jpg",

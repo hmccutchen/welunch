@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}
+</style><link type="text/css" rel="stylesheet" href="./WeLunch_files/css"><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}
+</style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+</style>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" href="./WeLunch_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./WeLunch_files/font-awesome.min.css">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WeLunch</title>
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="wJ0a12rdYe+2TOMzzA5WroBRLNnirpvoPMhaiVa83Srt3EzcwNnRCrevJoXFFp7Ko3W9+9gy2sa+N7If9kGk1Q==">
+    <meta name="action-cable-url" content="/cable">
+    <link rel="stylesheet" media="all" href="./WeLunch_files/application-53d1fc2e6929c695167f608a8fa33be8868299cc155aeb59d54ee65946e22f2e.css">
+ <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+  <script type="text/javascript" charset="UTF-8" src="./WeLunch_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/map.js"></script><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/marker.js"></script><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/map.js"></script><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/marker.js"></script><style type="text/css">.gm-style {
+        font: 400 11px Roboto, Arial, sans-serif;
+        text-decoration: none;
+      }
+      .gm-style img { max-width: none; }</style><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/onion.js"></script><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/ViewportInfoService.GetViewportInfo"></script><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/vt"></script><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/controls.js"></script><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/AuthenticationService.Authenticate"></script><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/stats.js"></script><script type="text/javascript" charset="UTF-8" src="./WeLunch_files/QuotaService.RecordEvent"></script></head>
+  <body>
+    <div class="navbar-wagon">
+  <!-- Logo -->
+  <a class="navbar-wagon-brand" href="http://localhost:3000/">
+    <img height="300" src="./WeLunch_files/waiterrunning-be15e2b289f31cd73bdf85f1d2b831197e0624dbb9cf40e00a9d64bc0eeec7a2.png" alt="Waiterrunning">
+</a>
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+
+      <!-- Links when logged in -->
+
+      <!-- <#%= link_to "About", dashboard_index_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <#%= link_to "Map", dashboard_index_path, class: "navbar-wagon-item navbar-wagon-link" %> -->
+
+
+      <a class="navbar-wagon-item navbar-wagon-link" href="http://localhost:3000/dashboard/index">Dashboard</a>
+
+
+      <!-- Avatar with dropdown menu -->
+      <div class="navbar-wagon-item">
+        <div class="dropdown">
+          <img class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown" src="./WeLunch_files/ssaunier" alt="Ssaunier">
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li>
+              <a href="http://localhost:3000/#">
+                <i class="fa fa-user"></i> Profile
+</a>            </li>
+            <li>
+              <a href="http://localhost:3000/#">
+                <i class="fa fa-cog"></i>  Settings
+</a>            </li>
+            <li>
+              <a rel="nofollow" data-method="delete" href="http://localhost:3000/users/sign_out">
+                <i class="fa fa-sign-out"></i>  Log out
+</a>            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+
+  <!-- Dropdown list appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="http://localhost:3000/#">Some mobile link</a></li>
+        <li><a href="http://localhost:3000/#">Other one</a></li>
+        <li><a href="http://localhost:3000/#">Other one</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+    
+    
+
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
+
+
+
+
+
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), role=" listbox"="">
+
+    <div class="item carousel-item active" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner25-cb8bda5cb0de46b0c0b932b7af374351401e96dd1cd4f537c96bd5ba6b095c17.jpg)">
+    </div>
+
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner24-2119d653899f197c6cbdeb5d48603166d4f5127529ffea247447fbcb5cae8b16.jpg)">
+    </div>
+
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner23-f0deea0370dec83cff81fa22b1937a394cbd50b8703ac8e6d87b4ff15dddce3c.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner21-fcfeef9149d4cffbc1f913fca82e2b4aa8a34b32b33ee4b60b454cbe34e07a94.jpg)">
+    </div>
+    <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner29-327319bc166024cfdb4ddcfe313560d6a611b3465bf1826cfb75ea2f294b128b.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner28-3ed5e9d549a0881e5f22c45ea7de676fd4e2cf812b28ede5692ca0bc57252bd8.jpg)">
+    </div>
+    <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner27-fd0b14a4625b4930daa7eff0900db925fef496e9a48c8e5691f66d1cb1f3836c.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner26-42ecf197f48c89052705e45073586c5fd11279a99733ff950f4acfab34842591.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner20-561b9649b7b0bfc4f9cefe434c8b7382a22661c28be5aa4b224f9ab274ebedf6.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner18-397a3e67c271fa2146f0207c92bd44141e19d5fba07298d2f56030bbd33e9220.jpg)">
+    </div>
+    <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner17-51b66c3b0a155dcc7bfe31c4c64cd8b81da926c081c5ef5a546c11c78c715434.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner16-dfbe777ddcb8f6b2f149a149040eb7db41f96865b5d1d2df998e867121cadd29.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner15-661740e43d0d7053d677e0aec8c223a912aedf5f3b01bee69e6606157c1d77a6.jpg)">
+    </div>
+    <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner14-31f0f0c04ca6ce9a8543eb0a812e4224c3b155d960e74e6ab0a917a313c87431.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner13-c9fe61596f9acfbff21c61ce572baa0c7ac2ea661c5c8a87b2eee4acc8dd0033.jpg)">
+    </div><div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner12-a3b5828c73d404fd1b77e7ce115443f40d1a85315f1f54a06ef82d72fb66dfd2.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner11-b4707702a08d258231ce367422d089aa4b9e6e31344d15280a00ea5fe9f5cabc.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner10-49c4c970490e71a8401e5f191514db2b8711df7c62763232efc1ff04117bca70.jpg)">
+    </div>
+    <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner9-f2474889ea4eb5bb770dd74cf7e5df2b22363003eab341af80c4e765470c3f4c.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner8-2602336a73c9a64640ea04e9983e56d9c7ac2f4deba8b1997eb6094489042ce7.jpg)">
+    </div>
+    <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner7-749a7b4842f492e8299cffe25e4cb686a514678a552f221a5955c00c157e481d.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner5-1f80f7bd026828dea83cc5bf03c4b21e656ebbe8f38efe717483916c82c4963d.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner4-80b5664a2dff29045f166099627995a772a9e62464c77235d05c634e8c37f512.jpg)">
+    </div>
+     <div class="item carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.3) 50%), url(/assets/banner3-5a3692a6080b32f33d875bbe3011f45787bce9133edce4dda2b0c322626365a6.jpg)">
+    </div>
+
+
+
+  </div>
+
+  <div class="content-carousel">
+    <div class="align-center">
+      <div class="flex-item">
+        <h1>WeLunch</h1>
+        <p>Pre-order &amp; say goodbye to waiting at restaurants</p>
+        <form action="http://localhost:3000/">
+          <div class="input-group search-style-home">
+
+            
+              <input type="text" class="form-control" name="query" placeholder="Search for...">
+              <span class="input-group-btn">
+               <!--  <button class="btn btn-primary" type="button">Go!</button> -->
+              </span>
+            
+          </div></form>
+        
+        <div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="page-layout">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="http://localhost:3000/restaurants/24">
+        <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(&#39; /assets/Prince-e857eefe7a41eb59522351df4d6d7961aa7a61cd814243ffc24520342d113943.jpg&#39;);">
+          <h4>Prince Street Pizza</h4>
+          <p class="card-category"></p>
+          <div class="card-description">
+          </div>
+        </div>
+</a>      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="http://localhost:3000/restaurants/25">
+        <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(&#39; /assets/TheMark-4be0b437a864bb8ad895c555f7efa39fe3e1b62df9189f7ce9eefd8a82ae541c.jpg&#39;);">
+          <h4>The Mark</h4>
+          <p class="card-category"></p>
+          <div class="card-description">
+          </div>
+        </div>
+</a>      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="http://localhost:3000/restaurants/26">
+        <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(&#39; /assets/TheGrill-42d0c89f1fdfd866acd13d0336bfdf51e7e377fe3ba5aeda66f354e9723ef12c.jpg&#39;);">
+          <h4>THE GRILL</h4>
+          <p class="card-category"></p>
+          <div class="card-description">
+          </div>
+        </div>
+</a>      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="http://localhost:3000/restaurants/27">
+        <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(&#39; /assets/Sushi1-69016800a7311ecc79df8a74c6cbf258126d61c3b42a965e8d915ab546b036b3.jpg&#39;);">
+          <h4>Sushi Nakazawa</h4>
+          <p class="card-category"></p>
+          <div class="card-description">
+          </div>
+        </div>
+</a>      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="http://localhost:3000/restaurants/28">
+        <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(&#39; /assets/MonkeyBar-fa5dfaf924375cbec0440a366b24524aabddf024de7aa25788854adbe7369fd3.jpg&#39;);">
+          <h4>Monkey Bar</h4>
+          <p class="card-category"></p>
+          <div class="card-description">
+          </div>
+        </div>
+</a>      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="http://localhost:3000/restaurants/29">
+        <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(&#39; /assets/UPLAND-6ac61c746b59d20594597f70c3e0998c5734beb10d464e0c5f1b70a0ef20d7c8.jpg&#39;);">
+          <h4>UPLAND</h4>
+          <p class="card-category"></p>
+          <div class="card-description">
+          </div>
+        </div>
+</a>      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="http://localhost:3000/restaurants/30">
+        <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(&#39; /assets/Cherche-6ff33b0467b874ca9f67dbdf0c2f8063634092dc116d72afd6487f7dce7a6aa9.jpg&#39;);">
+          <h4>Cherche Midi</h4>
+          <p class="card-category"></p>
+          <div class="card-description">
+          </div>
+        </div>
+</a>      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="http://localhost:3000/restaurants/31">
+        <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(&#39; /assets/LeBernadin-c95a3524dc89fce26edb1baedf45ef6f2d9eec71763ea83273f1e70437198d29.jpg&#39;);">
+          <h4>Le Bernardin</h4>
+          <p class="card-category"></p>
+          <div class="card-description">
+          </div>
+        </div>
+</a>      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="http://localhost:3000/restaurants/32">
+        <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(&#39; /assets/Budda-36f6e33180802b5524d6427da7d5756a26d7d4cd72c9bcd1de57e46e01ada30d.jpg&#39;);">
+          <h4>Buddakan</h4>
+          <p class="card-category"></p>
+          <div class="card-description">
+          </div>
+        </div>
+</a>      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="http://localhost:3000/restaurants/33">
+        <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(&#39; /assets/Daniel-2b3713e2f6a3bc255cc2273970be18fd95dad6b86d523e70894cc561b82c35f7.jpg&#39;);">
+          <h4>Daniel</h4>
+          <p class="card-category"></p>
+          <div class="card-description">
+          </div>
+        </div>
+</a>      </div>
+    </div>
+  </div>
+  <div id="map" style="width: 100%; height: 600px; position: relative; overflow: hidden;" data-markers="[{&quot;lat&quot;:40.7230533,&quot;lng&quot;:-73.9945497},{&quot;lat&quot;:40.7752711,&quot;lng&quot;:-73.9633994},{&quot;lat&quot;:40.7583177,&quot;lng&quot;:-73.9718681},{&quot;lat&quot;:40.7317959,&quot;lng&quot;:-74.0044661},{&quot;lat&quot;:40.7598899,&quot;lng&quot;:-73.9732086},{&quot;lat&quot;:40.7415505,&quot;lng&quot;:-73.9851675},{&quot;lat&quot;:40.7248441,&quot;lng&quot;:-73.9916574},{&quot;lat&quot;:40.7615691,&quot;lng&quot;:-73.9818048},{&quot;lat&quot;:40.7419634,&quot;lng&quot;:-74.0049148},{&quot;lat&quot;:40.7667738,&quot;lng&quot;:-73.9676022}]"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -115, -241);"><div style="width: 256px; height: 256px; position: absolute; left: 0px; top: 256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -256px; top: 256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -256px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 0px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 256px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 256px; top: 256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 256px; top: 512px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 0px; top: 512px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -256px; top: 512px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -256px; top: -256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 0px; top: -256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 256px; top: -256px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -115, -241);"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: -256px;"></div></div></div><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: -75px; top: 158px; z-index: 201;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: 107px; top: -244px; z-index: -201;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: 58px; top: -113px; z-index: -70;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: -132px; top: 91px; z-index: 134;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: 50px; top: -125px; z-index: -82;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: -20px; top: 16px; z-index: 59;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: -58px; top: 144px; z-index: 187;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: 0px; top: -138px; z-index: -95;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: -135px; top: 12px; z-index: 55;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: 82px; top: -178px; z-index: -135;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -115, -241);"><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./WeLunch_files/vt(1)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./WeLunch_files/vt(2)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./WeLunch_files/vt(3)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./WeLunch_files/vt(4)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./WeLunch_files/vt(5)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./WeLunch_files/vt(6)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./WeLunch_files/vt(7)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./WeLunch_files/vt(8)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 512px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./WeLunch_files/vt(9)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./WeLunch_files/vt(10)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./WeLunch_files/vt(11)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="./WeLunch_files/vt(12)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"></div><div style="z-index: 4; position: absolute; left: 50%; top: 50%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><div class="gmnoprint" style="width: 27px; height: 43px; overflow: hidden; position: absolute; opacity: 0.01; left: -75px; top: 158px; z-index: 201;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" usemap="#gmimap10" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"><map name="gmimap10" id="gmimap10"><area href="javascript:void(0)" log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" title="" style="cursor: pointer; touch-action: none;"></map></div><div class="gmnoprint" style="width: 27px; height: 43px; overflow: hidden; position: absolute; opacity: 0.01; left: 107px; top: -244px; z-index: -201;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" usemap="#gmimap11" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"><map name="gmimap11" id="gmimap11"><area href="javascript:void(0)" log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" title="" style="cursor: pointer; touch-action: none;"></map></div><div class="gmnoprint" style="width: 27px; height: 43px; overflow: hidden; position: absolute; opacity: 0.01; left: 58px; top: -113px; z-index: -70;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" usemap="#gmimap12" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"><map name="gmimap12" id="gmimap12"><area href="javascript:void(0)" log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" title="" style="cursor: pointer; touch-action: none;"></map></div><div class="gmnoprint" style="width: 27px; height: 43px; overflow: hidden; position: absolute; opacity: 0.01; left: -132px; top: 91px; z-index: 134;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" usemap="#gmimap13" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"><map name="gmimap13" id="gmimap13"><area href="javascript:void(0)" log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" title="" style="cursor: pointer; touch-action: none;"></map></div><div class="gmnoprint" style="width: 27px; height: 43px; overflow: hidden; position: absolute; opacity: 0.01; left: 50px; top: -125px; z-index: -82;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" usemap="#gmimap14" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"><map name="gmimap14" id="gmimap14"><area href="javascript:void(0)" log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" title="" style="cursor: pointer; touch-action: none;"></map></div><div class="gmnoprint" style="width: 27px; height: 43px; overflow: hidden; position: absolute; opacity: 0.01; left: -20px; top: 16px; z-index: 59;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" usemap="#gmimap15" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"><map name="gmimap15" id="gmimap15"><area href="javascript:void(0)" log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" title="" style="cursor: pointer; touch-action: none;"></map></div><div class="gmnoprint" style="width: 27px; height: 43px; overflow: hidden; position: absolute; opacity: 0.01; left: -58px; top: 144px; z-index: 187;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" usemap="#gmimap16" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"><map name="gmimap16" id="gmimap16"><area href="javascript:void(0)" log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" title="" style="cursor: pointer; touch-action: none;"></map></div><div class="gmnoprint" style="width: 27px; height: 43px; overflow: hidden; position: absolute; opacity: 0.01; left: 0px; top: -138px; z-index: -95;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" usemap="#gmimap17" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"><map name="gmimap17" id="gmimap17"><area href="javascript:void(0)" log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" title="" style="cursor: pointer; touch-action: none;"></map></div><div class="gmnoprint" style="width: 27px; height: 43px; overflow: hidden; position: absolute; opacity: 0.01; left: -135px; top: 12px; z-index: 55;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" usemap="#gmimap18" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"><map name="gmimap18" id="gmimap18"><area href="javascript:void(0)" log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" title="" style="cursor: pointer; touch-action: none;"></map></div><div class="gmnoprint" style="width: 27px; height: 43px; overflow: hidden; position: absolute; opacity: 0.01; left: 82px; top: -178px; z-index: -135;"><img alt="" src="./WeLunch_files/spotlight-poi2_hdpi.png" draggable="false" usemap="#gmimap19" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"><map name="gmimap19" id="gmimap19"><area href="javascript:void(0)" log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" title="" style="cursor: pointer; touch-action: none;"></map></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div></div><iframe frameborder="0" src="./WeLunch_files/saved_resource.html" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;"></iframe><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=40.749167,-73.984157&amp;z=13&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img alt="" src="./WeLunch_files/google4_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 75px; top: 210px;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;">Map data ©2018 Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img alt="" src="./WeLunch_files/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 275px; bottom: 0px; width: 121px;"><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="text-decoration: none; cursor: pointer; display: none;">Map Data</a><span>Map data ©2018 Google</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2018 Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 95px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><button draggable="false" title="Toggle fullscreen view" aria-label="Toggle fullscreen view" type="button" style="background: none; border: 0px; margin: 10px 14px; padding: 0px; position: absolute; cursor: pointer; user-select: none; width: 25px; height: 25px; overflow: hidden; top: 0px; right: 0px;"><img alt="" src="./WeLunch_files/sv9.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></button><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_blank" rel="noopener" title="Report errors in the road map or imagery to Google" href="https://www.google.com/maps/@40.7491673,-73.9841571,13z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div><div class="gmnoprint gm-bundled-control" draggable="false" controlwidth="28" controlheight="55" style="margin: 10px; user-select: none; position: absolute; left: 0px; top: 0px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 0px;"><div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;"><button draggable="false" title="Zoom in" aria-label="Zoom in" type="button" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; width: 28px; height: 27px; top: 0px; left: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img alt="" src="./WeLunch_files/tmapctrl_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></button><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div><button draggable="false" title="Zoom out" aria-label="Zoom out" type="button" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; width: 28px; height: 27px; top: 0px; left: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img alt="" src="./WeLunch_files/tmapctrl_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: -15px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></button></div></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="28" style="margin: 10px; user-select: none; position: absolute; bottom: 42px; right: 28px;"><div class="gm-svpc" controlwidth="28" controlheight="28" style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: none; position: absolute; left: 0px; top: 0px;"><div style="position: absolute; left: 1px; top: 1px;"></div><div style="position: absolute; left: 1px; top: 1px;"><div aria-label="Street View Pegman Control" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img alt="" src="./WeLunch_files/cb_scout5_hdpi.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="Pegman is on top of the Map" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img alt="" src="./WeLunch_files/cb_scout5_hdpi.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="Street View Pegman Control" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img alt="" src="./WeLunch_files/cb_scout5_hdpi.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Rotate map 90 degrees" style="width: 28px; height: 28px; overflow: hidden; position: absolute; background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; display: none;"><img alt="" src="./WeLunch_files/tmapctrl4_hdpi.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; top: 0px; cursor: pointer;"><img alt="" src="./WeLunch_files/tmapctrl4_hdpi.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 48px; top: 0px;"><div class="gm-style-mtc" style="float: left; position: relative;"><div role="button" tabindex="0" title="Show street map" aria-label="Show street map" aria-pressed="true" draggable="false" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 22px; font-weight: 500;">Map</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; left: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Show street map with terrain" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img alt="" src="./WeLunch_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Terrain</label></div></div></div><div class="gm-style-mtc" style="float: left; position: relative;"><div role="button" tabindex="0" title="Show satellite imagery" aria-label="Show satellite imagery" aria-pressed="false" draggable="false" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 40px; border-left: 0px;">Satellite</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; right: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Show imagery with street names" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img alt="" src="./WeLunch_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Labels</label></div></div></div></div><div draggable="false" class="gm-style-cc" style="position: absolute; user-select: none; height: 14px; line-height: 14px; right: 166px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><span>1 km&nbsp;</span><div style="position: relative; display: inline-block; height: 8px; bottom: -1px; width: 73px;"><div style="width: 100%; height: 4px; position: absolute; left: 0px; top: 0px;"></div><div style="width: 4px; height: 8px; left: 0px; top: 0px; background-color: rgb(255, 255, 255);"></div><div style="width: 4px; height: 8px; position: absolute; background-color: rgb(255, 255, 255); right: 0px; bottom: 0px;"></div><div style="position: absolute; background-color: rgb(102, 102, 102); height: 2px; left: 1px; bottom: 1px; right: 1px;"></div><div style="position: absolute; width: 2px; height: 6px; left: 1px; top: 1px; background-color: rgb(102, 102, 102);"></div><div style="width: 2px; height: 6px; position: absolute; background-color: rgb(102, 102, 102); bottom: 1px; right: 1px;"></div></div></div></div></div></div></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- <div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fa fa-github"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fa fa-heart"></i> by the I'm Still Standing Team
+  </div>
+</div>
+ -->
+
+    <script src="./WeLunch_files/application-8402b55e61549f639d6cd2457fa7dd254678711c04f28d4d50336937e99f2612.js"></script>
+
+    <script src="./WeLunch_files/js"></script>
+    <script src="./WeLunch_files/map-11473e9641c1f5ab4505.js"></script>
+
+    <script src="./WeLunch_files/js(1)"></script>
+
+    <script src="./WeLunch_files/map-11473e9641c1f5ab4505.js"></script>
+  <script src="./WeLunch_files/application-bd86b1a84a0d1214b180.js"></script>
+
+
+
+  
+<script>
+  $('.carousel').carousel()
+</script>
+
+
+
+
+
+
+
+</body></html>
