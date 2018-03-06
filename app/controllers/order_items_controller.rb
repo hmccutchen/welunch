@@ -15,6 +15,7 @@ def create
 
   def index
     @items = @reservation.order_items
+
   end
 
   private
