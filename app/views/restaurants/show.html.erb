@@ -1,68 +1,62 @@
-<style>
-#restaurant-banner {
-  height: 60vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-.restaurant-banner-content {
-  color: white;
-}
-</style>
-
-<div id="restaurant-banner" style="background-image: url(<%= image_path @restaurant.picture %>); background-size: cover;">
-  <div class="restaurant-banner-content">
-
-    <h2><%#= @restaurant.name %></h2>
-    <p>  <%#= @restaurant.category %></p>
-    <p> <%#= @restaurant.address %></p>
-
-
-  </div>
-</div>
 
 <div class="container">
-  <div class="col-xs-12 col-m-6" id="make-reservation">
+  <div class="row">
+    <div class="col-md-4 tall">
+
+      <div class="sticky">
 
 
-   <% @restaurant.reservations.each do |d| %>
-   <p><%= d.time.to_formatted_s(:long) %></p>
-   <% end %>
-   <%= render "reservations/form" %>
+        <div class="restaurant-info">
+          <h2><%= @restaurant.name %></h2>
+          <p><%= @restaurant.address %></p>
+        </div>
 
-   <div style= "overflow-y: scroll; height:600px; background: #cacaca; border-radius: 2%">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path @restaurant.picture %>);">
+          <div class="card-category"><%= @restaurant.category %></div>
+        </div>
 
-    <div class="col-xs-12 col-m-6">
-      <div class="menu">
-        <h2><%= @restaurant.name %></h2>
-        <p><i> <%= @restaurant.category %></i></p>
-        <h4>Address:</h4>
-        <p><%= @restaurant.address %></p>
-        <h2>Drinks</h2>
-        <p><% @restaurant.menu_items.where(menu_category: 'drinks').each do |item| %></p>
-        <%=item.name%>
-        <%=item.description%>
-        <p> $<%=item.price%></p>
-        <%end%>
-        <h2>Appetizer</h2>
-        <p><% @restaurant.menu_items.where(menu_category: 'appetizer').each do |item| %></p>
-        <%=item.name%>
-        <%=item.description%>
-        <p> $<%=item.price%></p>
-        <%end%>
-        <h2>Entrees</h2>
-        <p><% @restaurant.menu_items.where(menu_category: 'entrees').each do |item| %></p>
-        <%=item.name%>
-        <%=item.description%>
-        <p> $<%=item.price%></p>
-        <%end%>
+        <div class="reservation-form">
+          <%= render "reservations/form" %>
+        </div>
+
       </div>
+
+    </div>
+
+    <div class="col-md-8">
+      <div class="menu-container">
+
+        <% @restaurant.menu_items.each do |item| %>
+
+          <div class="menu">
+            <div class='menu-upvote'>
+              <i class="fa fa-cutlery" aria-hidden="true"></i>
+              <div class='menu-count'></div>
+            </div>
+
+            <div class='menu-body'>
+              <h3><%= item.name %></h3>
+              <p><%= item.description %></p>
+            </div>
+
+            <div>$<%= item.price %></div>
+
+            <!-- <ul class="list-inline menu-controls hidden-sm hidden-xs">
+              <li><a href=""><i class="fa fa-heart"></i></a></li>
+              <li><a href=""><i class="fa fa-share"></i></a></li>
+              <li><a href=""><i class="fa fa-star"></i></a></li>
+            </ul> -->
+          </div>
+
+        <% end %>
+
+      </div>
+
     </div>
   </div>
 </div>
-</div>
+
+
 
 
 

@@ -1,0 +1,28 @@
+.border{
+  border: 1px solid grey;
+}
+
+
+.menu-container{
+  background-color: white;
+  border-radius:4px;
+  min-height: 500px;
+  margin-top: 35px;
+}
+
+
+.sticky {
+  position: sticky;
+  top: 10px;
+}
+.tall {
+    height: 100vh;
+}
+.reservation-form{
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+#reservation_time_4i, #reservation_time_5i{
+  margin-top:10px;
+}
