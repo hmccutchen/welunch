@@ -4,13 +4,10 @@
     <div class="col-md-4 tall">
 
       <div class="sticky">
-
-
         <div class="restaurant-info">
           <h2><%= @restaurant.name %></h2>
           <p><%= @restaurant.address %></p>
         </div>
-
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path @restaurant.picture %>);">
           <div class="card-category"><%= @restaurant.category %></div>
         </div>
