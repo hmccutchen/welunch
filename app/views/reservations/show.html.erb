@@ -1,25 +1,48 @@
 <div class="container">
-  <h1>menu</h1>
+  <div class="row">
+    <div class="col-md-4 card-white">
+      <h2>Your order:</h2>
+      <div id="list-order">
+        <% @reservation.order_items.each do |order| %>
+          <%= render "order_items/single_item", item: order.menu_item  %>
+        <% end %>
+      </div>
 
-  <h1><%= @restaurant.name %></h1>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#shopping_cart">
+        Confirm order
+      </button>
+    </div>
 
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#shopping_cart">
-  Shopping Cart
-</button>
+    <div class="col-md-8">
+      <div class="menu-container shopping-cart">
+        <% @restaurant.menu_items.each do |menu_item| %>
 
 
-  <h2>MENU ITEMS:</h2>
-  <% @restaurant.menu_items.each do |menu_item| %>
-  <h3><%= menu_item.name %></h3>
-  <p><%= menu_item.description %></p>
-  <p> <%=menu_item.price %></p>
-  <p>
-    <%= simple_form_for([@reservation, @order_item]) do |f| %>
-      <%= f.input :menu_item_id, as: :hidden, input_html: { value: menu_item.id } %>
-      <%= f.submit value: "Add Item" %>
-    <% end %>
-  <hr>
-  <% end %>
+        <div class="menu">
+
+          <div class="menu-upvote">
+            <i class="fa fa-cutlery" aria-hidden="true"></i>
+            <div class="menu-count"></div>
+          </div>
+
+          <div class='menu-body'>
+           <h3><%= menu_item.name %></h3>
+           <p><%= menu_item.description %></p>
+           <p> <%=menu_item.price %></p>
+         </div>
+
+         <div>
+           <%= simple_form_for([@reservation, @order_item], remote: true) do |f| %>
+           <%= f.input :menu_item_id, as: :hidden, input_html: { value: menu_item.id } %>
+           <%= f.submit value: "Add Item", class: "btn btn-primary" %>
+           <% end %>
+         </div>
+       </div>
+       <% end %>
+     </div>
+
+   </div>
+ </div>
 </div>
 
 
@@ -31,16 +54,17 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4> Your current shopping cart</h4>
 
-      <div class="modal-body">
-        <% @reservation.order_items.each do |item| %>
+        <div class="modal-body">
+          <% @reservation.order_items.each do |item| %>
           <p>
             <%= item.menu_item.name %> - <%= item.menu_item.price %>
           </p>
-        <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <%= link_to "Save changes",reservation_order_items_path(@reservation), class: "btn btn-primary"%>
+          <% end %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= link_to "Save changes",reservation_order_items_path(@reservation), class: "btn btn-primary"%>
+        </div>
       </div>
     </div>
   </div>
