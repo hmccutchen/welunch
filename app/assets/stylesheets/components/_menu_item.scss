@@ -39,6 +39,9 @@
     font-size: 20px;
   }
 }
+.border-bottom{
+  border-bottom:1px solid #e8e8e8;
+}
 .menu-count {
   margin: 2px 0 0;
 }
@@ -74,6 +77,12 @@
   font-size: 15px;
   transition: all 0.15s ease;
   border-color: transparent;
+}
+
+.reciept{
+color: green;
+font-family: 'Oswald', sans-serif;
+font-size: 25px
 }
 
 /* Hover effects */
