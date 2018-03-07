@@ -8,9 +8,7 @@
         <% end %>
       </div>
 
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#shopping_cart">
-        Confirm order
-      </button>
+      <%= link_to "Confirm Order",reservation_order_items_path(@reservation), class: "btn btn-primary"%>
     </div>
 
     <div class="col-md-8">
@@ -28,7 +26,7 @@
           <div class='menu-body'>
            <h3><%= menu_item.name %></h3>
            <p><%= menu_item.description %></p>
-           <p> <%=menu_item.price %></p>
+           <p><%= menu_item.price %></p>
          </div>
 
          <div>
@@ -47,7 +45,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="shopping_cart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!-- <div class="modal fade" id="shopping_cart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -69,3 +67,4 @@
     </div>
   </div>
 </div>
+ -->
