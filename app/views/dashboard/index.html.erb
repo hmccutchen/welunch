@@ -1,12 +1,30 @@
 
-<% @my_reservations.each do |reservation| %>
-<%= link_to reservation_order_items_path(reservation) do %>
-<h2><%= reservation.restaurant.name %></h2>
-  <% end %>
-  <p><%= reservation.time.to_formatted_s(:long) %></p>
-  <p><%= reservation.number_of_people %></p>
-<%= link_to "edit", edit_restaurant_reservation_path(reservation.restaurant, reservation), class: "btn btn-primary" %>
-<%= link_to "cancel", restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-danger" %>
-<%= reservation.status %>
- <% end %>
+
+<div class="container">
+  <div class="row">
+    <% @my_reservations.each do |reservation| %>
+    <div class="col-xs-12">
+      <div class="message">
+        <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+        <div class="message-name"> <p><%= reservation.time.to_formatted_s(:long) %></p>
+        </div>
+        <div class="message-body">
+          <p><%= reservation.restaurant.name %></p>
+          <p><%= reservation.restaurant.address %></p>
+          <p><%= reservation.number_of_people %></p>
+        </div>
+        <div class="message-status">
+        <%= link_to reservation_order_items_path(reservation) do %>
+          <p class="status pending"><%= link_to "edit", edit_restaurant_reservation_path(reservation.restaurant, reservation), class: "btn btn-primary" %></p>
+          <p class="price"><%= link_to "cancel", restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-danger" %>
+            <%= reservation.status %> </p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+</div>
 
