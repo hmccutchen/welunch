@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'dashboard_owner/index'
-
-  get 'dashboard/index'
 
   devise_for :users
   root to: 'restaurants#index'
@@ -15,9 +12,12 @@ Rails.application.routes.draw do
       end
     end
   end
-    resources :reservations, only: [] do
-      resources :order_items, only: [:create, :index]
-    end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :reservations, only: [] do
+    resources :order_items, only: [:create, :index]
+  end
+
+  get 'search', to: 'search#index'
+  get 'dashboard_owner/index'
+  get 'dashboard/index'
 end
 
