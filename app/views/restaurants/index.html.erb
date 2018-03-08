@@ -55,11 +55,11 @@
   <div class="align-center">
     <div class="flex-item">
       <h1>WeLunch</h1>
-      <p>Add time to your day</p>
+      <p class="subtitle">Add time to your day</p>
       <div class="input-group search-style-home">
 
         <form action="/search" class="inline-form">
-          <input type="text" class="form-control" name="query" placeholder="Search for...">
+          <input type="text" class="form-control input-search-home" name="query" placeholder="Search for...">
           <span class="input-group-btn">
 
           </span>
@@ -79,11 +79,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 150px 100px;
+    padding: 110px 100px;
   }
   .feature {
     text-align: center;
-
+    width: 200px;
   }
 </style>
 
@@ -109,24 +109,19 @@
     </div>
   </div>
 
-  <style>
-    .home-image {
-      width: 200px;
-      height: 150px;
-    }
+<div class="align-center">
+  <a href="#restaurants-container">
+    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+  </a>
+</div>
+<div class="page-layout" id="restaurants-container">
 
-    .card-beside-map {
-      height: 100vh;
-      width:100vh;
-    }
-  </style>
-<div class="page-layout">
   <div class="container">
     <div class="row">
       <% @restaurants.each do |restaurant| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <%= link_to restaurant_path(restaurant) do %>
-        <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(' <%= image_path restaurant.picture %>');">
+        <div class="card style-border" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(' <%= image_path restaurant.picture %>');">
           <h4><%= restaurant.name %></h4>
           <p class="card-category"><%#= restaurant.name %></p>
           <div class="card-description">
@@ -137,7 +132,7 @@
       <% end %>
     </div>
   </div>
-  <div id="map" style="width: 100%; max-height: 100vh;" data-markers="<%= @markers.to_json %>">
+  <div id="map" style="width: 100%; max-height: 88vh;" data-markers="<%= @markers.to_json %>">
   </div>
 </div>
 
