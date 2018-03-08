@@ -1,0 +1,6 @@
+function addNewItem(item){
+  let listOrder = document.getElementById('list-order');
+  listOrder.insertAdjacentHTML('beforeend', item);
+}
+
+addNewItem('<%= j render "order_items/single_item", item: @order_item.menu_item %>');

@@ -8,8 +8,17 @@
   border-radius:4px;
   min-height: 500px;
   margin-top: 35px;
-  height: 75vh;
+
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  height: 90vh;
   overflow: scroll;
+  // .shopping-cart{
+  //   height:80vh;
+  //   overflow: scroll;
+
+  // }
+
 }
 
 
@@ -18,12 +27,13 @@
   top: 10px;
 }
 .tall {
-    height: 100vh;
+  height: 100vh;
 }
 .reservation-form{
   background: white;
   border-radius: 5px;
   padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 #reservation_time_4i, #reservation_time_5i{
   margin-top:10px;
