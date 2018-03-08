@@ -1,3 +1,8 @@
+
+
+<p><%= link_to restaurant_path(restaurant) do %>
+  <%= image_tag restaurant.picture, height: 200, width: 300, crop: :fill%>
+<% end %></p>
 <style>
   .dog-info {
     width: 100%;
@@ -5,13 +10,8 @@
   }
 </style>
 <div class="map-box">
-  <div class="dog-info">
+  <div class="res-info">
   <h4><%= restaurant.name %></h4>
   <p> <%= restaurant.address %></p>
   </div>
 </div>
-
-
-<%#= link_to restaurant_path(restaurant) do %>
-  <%#= cl_image_tag restaurant.photo, height: 200, width: 300, crop: :fill%>
-<%# end %>
