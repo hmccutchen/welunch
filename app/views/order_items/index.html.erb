@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-4">
-      <h1>Your Check </h1>
+      <h1>Your Confirmation number B904X </h1>
       <div class="menu-container">
         <div class="reciept">
-          <p>Reservation: <%= @reservation.time.to_formatted_s(:long) %></p>
-          <p>People: <%= @reservation.number_of_people %></p>
+          <p>   Reservation: <%= @reservation.time.to_formatted_s(:long) %></p>
+          <p>   People: <%= @reservation.number_of_people %></p>
         </div>
         <% @items.each do |item| %>
 
@@ -24,6 +24,9 @@
 
       </div>
       <h2>Total Amount: $<%= @reservation.cart %></h2>
+    </div>
+    <div class="col-md-6 col-md-4">
+
     </div>
   </div>
 </div>
