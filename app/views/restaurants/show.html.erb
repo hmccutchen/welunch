@@ -25,19 +25,19 @@
 
         <% @restaurant.menu_items.each do |item| %>
 
-          <div class="menu">
-            <div class='menu-upvote'>
-              <i class="fa fa-cutlery" aria-hidden="true"></i>
-              <div class='menu-count'></div>
-            </div>
+        <div class="menu">
+          <div class='menu-upvote'>
+            <i class="fa fa-cutlery" aria-hidden="true"></i>
+            <div class='menu-count'></div>
+          </div>
 
-            <div class='menu-body'>
-         <p><%= item.menu_category %></p>
-              <h3><%= item.name %></h3>
-              <p><%= item.description %></p>
-            </div>
+          <div class='menu-body'>
+           <p><%= item.menu_category %></p>
+           <h3><%= item.name %></h3>
+           <p><%= item.description %></p>
+         </div>
 
-            <div>$<%= item.price %></div>
+         <div class="price">$<%= item.price %></div>
 
             <!-- <ul class="list-inline menu-controls hidden-sm hidden-xs">
               <li><a href=""><i class="fa fa-heart"></i></a></li>
@@ -46,13 +46,13 @@
             </ul> -->
           </div>
 
-        <% end %>
+          <% end %>
+
+        </div>
 
       </div>
-
     </div>
   </div>
-</div>
 
 
 

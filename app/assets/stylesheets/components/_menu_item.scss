@@ -4,10 +4,14 @@
   border-radius: 3px;
   transition: all 0.15s ease;
 }
+.price {
+  padding-top: 32px;
+}
 
 /* Body design */
 .menu-body {
   flex: 1 1 auto;
+  padding-left: 25px;
 }
 .menu-body h3 {
   font-weight: bold;
@@ -35,9 +39,10 @@
   font-weight: bold;
   font-size: 13px;
   line-height: 20px;
+  padding: 10px;
   .fa{
-    font-size: 20px;
-    color: blue;
+    font-size: 36px;
+    color: #3434b5;
   }
 }
 .border-bottom{
