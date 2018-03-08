@@ -13,3 +13,14 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+
+  .feature-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 200px 100px;
+  }
+  .feature {
+
+  }
