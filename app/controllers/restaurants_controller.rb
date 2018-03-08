@@ -12,16 +12,18 @@ class RestaurantsController < ApplicationController
     @markers = @restaurants.map do |restaurant|
       {
         lat: restaurant.latitude,
-        lng: restaurant.longitude
+        lng: restaurant.longitude,
+        infoWindow: { content: render_to_string(partial: "/restaurants/map_box", locals: { restaurant: restaurant }) }
       }
-    end
-  end
-
-  def show
-    @restaurant = Restaurant.find(params[:id])
-    @reservation = Reservation.new
 
   end
+end
+
+def show
+  @restaurant = Restaurant.find(params[:id])
+  @reservation = Reservation.new
+
+end
 
 
 end

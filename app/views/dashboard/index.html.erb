@@ -1,33 +1,32 @@
 
+<div class="menu-dashboard">
+  <div class="container">
+    <div class="row">
+      <% @my_reservations.each do |reservation| %>
+      <div class="col-md-12" >
+        <div class="message">
+          <div> <%= image_tag reservation.restaurant.picture, width: "200px", height: "100px", crop: :fill%></div>
 
-<div class="container">
-  <div class="row">
-    <% @my_reservations.each do |reservation| %>
-    <div class="col-xs-12">
-      <div class="message">
-<div> <%= image_tag reservation.restaurant.picture, width: "200px", height: "100px", crop: :fill%></div>
-
-        <div class="message-name"> <p><%= reservation.time.to_formatted_s(:long) %></p>
-          <p><%= reservation.status %></p>
-        </div>
-        <div class="message-body">
-          <p><%= reservation.restaurant.name %></p>
-          <p><%= reservation.restaurant.address %></p>
-          <p>Table for <%= reservation.number_of_people %></p>
-        </div>
-        <div class="message-status">
-        <%= link_to reservation_order_items_path(reservation) do %>
-          <div class="status pending"><%= link_to "edit", edit_restaurant_reservation_path(reservation.restaurant, reservation), class: "btn-medium" %>
-          <%= link_to "cancel", restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: { confirm: 'Are you sure?' },  class: "btn-medium hover-red" %>
+          <div class="message-name"> <p><%= reservation.time.to_formatted_s(:long) %></p>
+            <p><%= reservation.status %></p>
+          </div>
+          <div class="message-body">
+            <p><%= reservation.restaurant.name %></p>
+            <p><%= reservation.restaurant.address %></p>
+            <p>Table for <%= reservation.number_of_people %></p>
+          </div>
+          <div class="message-status">
+            <%= link_to reservation_order_items_path(reservation) do %>
+            <div class="status pending"><%= link_to "edit", edit_restaurant_reservation_path(reservation.restaurant, reservation), class: "btn-medium" %>
+              <%= link_to "cancel", restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: { confirm: 'Are you sure?' },  class: "btn-medium hover-red" %>
             </div>
             <% end %>
-          </div>
         </div>
       </div>
-    <% end %>
     </div>
+    <% end %>
   </div>
-</div>
+  </div>
 </div>
 
 
