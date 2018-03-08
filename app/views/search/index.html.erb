@@ -1,0 +1,20 @@
+<div class="page-layout">
+  <div class="container">
+    <div class="row">
+      <% @restaurants.each do |restaurant| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <%= link_to restaurant_path(restaurant) do %>
+        <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(' <%= image_path restaurant.picture %>');">
+          <h4><%= restaurant.name %></h4>
+          <p class="card-category"><%#= restaurant.name %></p>
+          <div class="card-description">
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div id="map" style="width: 100%; max-height: 100vh;" data-markers="<%= @markers.to_json %>">
+  </div>
+</div>
