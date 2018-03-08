@@ -8,17 +8,25 @@
           <div> <%= image_tag reservation.restaurant.picture, width: "200px", height: "100px", crop: :fill%></div>
 
           <div class="message-name"> <p><%= reservation.time.to_formatted_s(:long) %></p>
-            <p><%= reservation.status %></p>
+            <% if reservation.status == "approved" %>
+            <h6 class="approved"><%= reservation.status %></h6>
+            <% elsif reservation.status == "declined" %>
+            <h6 class="declined"><%= reservation.status %></h6>
+            <% elsif %>
+            <% reservation.status == "pending" %>
+                <h6 class="pending"><%= reservation.status %></h6>
+
+              <% end %>
           </div>
           <div class="message-body">
-            <p><%= reservation.restaurant.name %></p>
+            <h3><%= reservation.restaurant.name %></h3>
             <p><%= reservation.restaurant.address %></p>
             <p>Table for <%= reservation.number_of_people %></p>
           </div>
           <div class="message-status">
             <%= link_to reservation_order_items_path(reservation) do %>
-            <div class="status pending"><%= link_to "edit", edit_restaurant_reservation_path(reservation.restaurant, reservation), class: "btn-medium" %>
-              <%= link_to "cancel", restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: { confirm: 'Are you sure?' },  class: "btn-medium hover-red" %>
+            <div class="status pending"><%= link_to "edit", edit_restaurant_reservation_path(reservation.restaurant, reservation), class: "btn btn-primary" %>
+              <%= link_to "cancel", restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-primary" %>
             </div>
             <% end %>
         </div>
