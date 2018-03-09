@@ -1,0 +1,5 @@
+meta_product_name: "We Lunch"
+meta_title: "We Lunch - Add time to your day"
+meta_description: "Pre-order, set the time and eat on arrival!"
+meta_image: "cover.png"                       # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
