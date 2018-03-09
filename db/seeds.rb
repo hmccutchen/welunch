@@ -1087,7 +1087,7 @@ restaurants = [
 restaurants.each  do |restaurant_data|
   new_resto = Restaurant.new(name: restaurant_data[:name], category: restaurant_data[:category], address: restaurant_data[:address], picture: restaurant_data[:picture])
   new_resto.save!
-  sleep 2.5
+  sleep 5
   puts new_resto.name
   puts new_resto.latitude
   puts new_resto.longitude
