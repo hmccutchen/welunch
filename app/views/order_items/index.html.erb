@@ -1,33 +1,35 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-4">
-      <h1>Your Confirmation number B904X </h1>
-      <div class="menu-container">
-        <div class="reciept">
-          <p>   Reservation: <%= @reservation.time.to_formatted_s(:long) %></p>
-          <p>   People: <%= @reservation.number_of_people %></p>
-        </div>
-        <% @items.each do |item| %>
 
+      <div class="col-md-5">
+        <h1>Your reservation:</h1>
 
-
-        <div class="menu">
-          <div class="menu-body">
-          <h3> <%= item.menu_item.name %></h3>
-            <p> <%= item.menu_item.description %></p>
+        <div class="menu-container order-preview">
+          <div class="menu">
+            <div class="menu-body">
+             <p class="reciept">Reservation: <%= @reservation.time.to_formatted_s(:long) %></p>
+             <p class="reciept">People: <%= @reservation.number_of_people %></p>
+            </div>
           </div>
-        <div>
-          <p>$<%= item.menu_item.price %></p>
+          <% @items.each do |item| %>
+            <div class="menu">
+              <div class="menu-body">
+                <h3><%= item.menu_item.name %></h3>
+                <p><%= item.menu_item.description %></p>
+              </div>
+              <p>$<%= item.menu_item.price %></p>
+            </div>
+          <% end %>
         </div>
-        </div>
-        <% end %>
 
+        <h2>Total Amount: $<%= @reservation.cart %></h2>
       </div>
-      <h2>Total Amount: $<%= @reservation.cart %></h2>
-    </div>
-    <div class="col-md-6 col-md-4">
 
+
+    <div class="col-md-7">
+      <%= image_tag "payment-form.png", class:"payment-form" %>
     </div>
+
   </div>
 </div>
 
